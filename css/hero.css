@@ -1,0 +1,200 @@
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero {
+  background-image: url('../figures/brochures/1980-out.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom-center;
+  top: 10vh;
+  height: 90vh;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  margin-bottom: 10vh;
+  z-index: -2;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.hero h1 {
+  font-size: 46px;
+  margin: -20px 0 20px;
+}
+
+.hero p {
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+/* display, diagram, data, demo  */
+.pages-wrapper {
+  width: 90%;
+  height: 90%;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  top: 1rem;
+  /* padding-bottom: 10rem; */
+}
+
+.hero-content {
+  /* top: 10vh; */
+  width: 100%;
+  height: 100%;
+  /* height: 100%; */
+  padding: 1rem 2rem;
+  background-color: #eef;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  /* text-align: left; */
+  /* margin-top: 0.5rem; */
+  margin-bottom: 0.5rem;
+  color: #333;
+  initial-letter: 0.5rem;
+  /* border-bottom: 0.2rem solid #333; */
+  text-shadow: 0.2rem 0.2rem 0.5rem #555;
+}
+
+.hero-content h2 {
+  font-size: 3rem;
+  margin-bottom: -2rem;
+}
+
+.hero-content h4 {
+  font-size: 1.5rem;
+  margin-bottom: -1rem;
+}
+
+.hero-content hr {
+  /* color: gray; */
+  width: 50%;
+  /* height: 0.5rem; */
+  border-width: 0.1rem;
+  border-color: black;
+  background-color: black;
+}
+
+/* .hero-content p {
+    color: #555;
+    line-height: 30px;
+    letter-spacing: 1.2px;
+  } */
+
+.page {
+  /* height: 40%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  background-color: #fff;
+  box-shadow: 0.3rem 0.3rem 0.5rem #777;
+  position: relative;
+  /* z-index: -2; */
+  overflow: hidden;
+  transition: box-shadow 0.5s;
+}
+
+.page:hover {
+  box-shadow: 1rem 1rem 1rem #777;
+}
+
+.page-text {
+  text-align: center;
+  letter-spacing: 0.1rem;
+  position: absolute;
+  /* z-index: 1; */
+  top: -15rem;
+  transition: top 0.3s;
+}
+
+.page:hover .page-text {
+  top: -2rem;
+  transition: top 0.3s 0.3s;
+}
+
+.page-heading {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.page-subtitle {
+  font-size: 1.8rem;
+  color: #e41c6f;
+}
+
+.page-preview {
+  width: 100%;
+  height: 100%;
+  /* position: relative;
+  display: flex; */
+  transition: opacity 0.3s;
+  /* justify-content: center;
+  align-items: center; */
+
+  /* transition: bottom 0.3s; */
+}
+
+.page:hover .page-preview {
+  opacity: 0.2;
+  transition: top 0.3s 0.3s;
+}
+
+.page-content {
+  /* width: 10rem; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+
+  /* transition: bottom 0.3s; */
+}
+
+.page-link {
+  height: 5rem;
+  width: 15rem;
+  font-size: 3rem;
+  text-decoration: none;
+  font-weight: 600;
+  color: #333;
+  letter-spacing: 0.2rem;
+  border: 0.3rem solid #e41c6f;
+  padding: 0 2rem;
+  background-color: #fff;
+  position: relative;
+  /* bottom: 20rem; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  bottom: -25rem;
+
+  transition: bottom 0.3s;
+}
+
+.page:hover .page-link {
+  bottom: -5rem;
+  transition: bottom 0.3s 0.3s;
+}

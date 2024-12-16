@@ -1,0 +1,167 @@
+/* landing page tryptich */
+:root {
+  /* --right-bg-color: rgba(87, 84, 236, 0.8);
+    --center-bg-color: rgba(173, 66, 66, 0.8);
+    --left-bg-color: rgba(59, 201, 111, 0.8); */
+  --left-bg-color: rgba(43, 43, 43, 0.7);
+  --center-bg-color: rgba(43, 43, 43, 0.7);
+  --right-bg-color: rgba(43, 43, 43, 0.7);
+  /* --left-btn-hover-color: rgba(87, 84, 236, 1);
+    --right-btn-hover-color: rgba(28, 122, 28, 1); */
+  --hover-width: 50%;
+  --other-width: 25%;
+  --speed: 750ms;
+}
+
+.landing-heading {
+  font-size: 3.5rem;
+  color: rgb(238, 233, 233);
+  position: absolute;
+  /* justify-content: left;
+  align-items: center; */
+  top: 5%;
+  left: 55%;
+  width: 22rem;
+  transform: translateX(-55%);
+  white-space: normal;
+  text-align: center;
+  border: 5px double rgba(248, 245, 245, 0.7);
+}
+
+.landing-heading:hover {
+  color: rgb(178, 141, 72);
+  border-color: rgb(178, 141, 72);
+  background-color: rgb(220, 216, 216);
+}
+
+.landing-paragraph {
+  position: absolute;
+  left: 55%;
+  top: 35%;
+  transform: translateX(-55%);
+  color: rgb(238, 233, 233);
+  font-size: 1.2rem;
+  width: 20rem;
+  padding: 1.5rem;
+  white-space: normal;
+}
+
+.landing-container {
+  position: relative;
+  top: 10vh;
+  width: 100%;
+  height: 90%;
+  margin-bottom: 10vh;
+  background: #333;
+}
+
+.split {
+  position: absolute;
+  width: 33.33%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.split.left {
+  left: 0;
+  /* background: url('../figures/1980-fall-poetry-programs-in.jpg'); */
+  /* background: url('../figures/1980-poetry-program.jpg'); */
+  background: url('../figures/brochures/1988-fall-in.jpg');
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+}
+
+.split.left::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--left-bg-color);
+}
+
+.split.center {
+  left: 33.33%;
+  background: url('../figures/brochures/1996-spring-in.jpg');
+  /* background: url('../figures/1980-fall-poetry-programs-in.jpg'); */
+  /* background: url('../figures/1980-fall-poetry-programs-out.jpg'); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+}
+
+.split.center::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--center-bg-color);
+}
+
+.split.right {
+  right: 0;
+  background: url('../figures/brochures/1997-spring-in.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+}
+
+.split.right::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--right-bg-color);
+}
+
+.split.right,
+.split.center,
+.split.left,
+.split.right::before,
+.split.center::before,
+.split.left::before {
+  transition: all var(--speed) ease-in-out;
+}
+
+/* left  */
+.hover-left .left {
+  width: var(--hover-width);
+}
+
+.hover-left .right {
+  width: var(--other-width);
+}
+
+.hover-left .center {
+  width: var(--other-width);
+  left: 50%;
+}
+
+/* center  */
+.hover-center .center {
+  width: var(--hover-width);
+  left: 25%;
+}
+
+.hover-center .left {
+  width: var(--other-width);
+}
+
+.hover-center .right {
+  width: var(--other-width);
+}
+
+/* right  */
+.hover-right .right {
+  width: var(--hover-width);
+}
+
+.hover-right .left {
+  width: var(--other-width);
+}
+
+.hover-right .center {
+  width: var(--other-width);
+  left: 25%;
+}
